@@ -1,0 +1,22 @@
+// responsive flex column center
+@mixin flexResponsiveColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// responsive flex column flex start
+@mixin flexResponsiveColumnStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+//responsive flex row center
+@mixin flexResponsiveRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

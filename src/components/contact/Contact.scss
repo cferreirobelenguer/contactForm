@@ -1,0 +1,113 @@
+@import '../../assets/scss/colour.scss';
+@import '../../assets/scss/fonts.scss';
+@import '../../assets/scss/responsive.scss';
+@import '../../assets/scss/responsiveGrids.scss';
+
+.contact {
+    background-color: $background-template;
+    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    @include flexResponsiveColumn;
+    padding: 48px;
+    gap:64px;
+    @include small-desktop {
+        padding: 300px 294px;
+        gap:72px;
+    }
+
+    &__form {
+        display: flex;
+        @include flexResponsiveColumnStart;
+        width: 100%;
+        color: $primary-font;
+        gap:32px;
+        @include small-desktop {
+            gap: 64px;
+        }
+
+        input {
+            padding: 20px 0;
+            width: 100%;
+            background-color: $background-template;
+            border-style: solid;
+            border-width: 0 0 1px 0;
+            border-color: $input-color;
+            color: $primary-font;
+            font-weight: $bold-weight;
+            font-size: $md-size;
+            &::placeholder {
+                color: $primary-font;
+                font-family: 'Nexa';
+                font-size: $md-size;
+                font-style: normal;
+                font-weight: $bold-weight;
+                line-height: 160.5%;
+            }
+            &:focus {
+                border: 1px solid $secondary-font;
+                outline: none;
+            }
+        }
+    }
+    &__button {
+        @include flexResponsiveRow;
+        margin-top: 32px;
+        @include small-desktop {
+            margin-top: 8px;
+        }
+        &__style {
+            background-color: $background-template;
+            border:none;
+            color: $primary-font;
+            font-family: 'Nexa';
+            font-size: $small-size;
+            font-style: normal;
+            font-weight: $normal-weight;
+            line-height: 160.5%;
+            @include flexResponsiveRow;
+            gap: 24px;
+            @include small-desktop {
+                font-size: $md-size;
+                gap: 64px;
+            }
+        }
+    }
+
+    &__container {
+        @include flexResponsiveColumn;
+        gap:24px;
+        &__title {
+            margin: 0;
+            text-align: center;
+            color: $primary-font;
+            font-family: 'Nexa-bold';
+            font-size: $md-size;
+            font-style: normal;
+            font-weight: $extra-bold-weight;
+            line-height: normal;
+            width: 100%;
+            &--decoration {
+                color: $secondary-font;
+            }
+            @include small-desktop {
+                font-size: $lg-size;
+            }
+        }
+        
+        &__subtitle {
+            text-align: center;
+            color: $terciary-font;
+            font-family: 'Nexa';
+            font-size: $small-size;
+            font-style: normal;
+            font-weight: $normal-weight;
+            line-height: 160.5%;
+            margin: 0;
+            @include small-desktop {
+                font-size: $md-size;
+            }
+        }
+    
+    }
+}
