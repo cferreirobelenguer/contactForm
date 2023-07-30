@@ -36,7 +36,6 @@ const Contact = () => {
         const namePattern = /^([a-zA-ZñÑáéíóúÁÉÍÓÚ])+$/i;
         let isValid = true;
         event.preventDefault();
-        console.log(data)
 
         if (!(!isNaN(data.phone) && phonePattern.test(data.phone))) {
             isValid = false;
@@ -59,14 +58,17 @@ const Contact = () => {
         }
     
         if (isValid) {
-            console.log('Enviando datos:', data);
             setIsModalOpen(true)
             setModalInfo({
                 title: 'Thank you for contacting us!',
                 subtitle: 'We will answer you as soon as possible.'
             })
         } else {
-            console.log('No se pueden enviar los datos debido a validaciones incorrectas.');
+            setIsModalOpen(true);
+            setModalInfo({
+                title: 'Error',
+                subtitle: 'Please check your input and try again.'
+            });
         }
     }
     return (
